@@ -1,0 +1,31 @@
+.gitmodules
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+.vite/
+*.log
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# OpenHands
+workspace/
+.openhands/
+
+# Local-only files
+.claude/
+.design-handoff.html
+*.zip

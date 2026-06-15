@@ -1,0 +1,32 @@
+[project]
+name = "chat-app-capstone-backend"
+version = "0.1.0"
+description = "FastAPI backend embedding OpenHands SDK for the Deep Analyst chat app"
+requires-python = ">=3.11"
+dependencies = [
+    "openhands-sdk==1.24.0",
+    "openhands-tools==1.24.0",
+    "fastapi>=0.118",
+    "uvicorn[standard]>=0.36",
+    "pydantic>=2.10",
+    "python-dotenv>=1.0",
+    "httpx>=0.28",
+    "truststore>=0.10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
